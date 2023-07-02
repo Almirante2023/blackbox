@@ -1,4 +1,3 @@
-
 import customtkinter
 
 customtkinter.set_appearance_mode("dark")
@@ -15,13 +14,19 @@ def abrir_segunda_janela():
     cpf = customtkinter.CTkEntry(janela_segunda_aba, placeholder_text="Seu CPF")
     cpf.pack(padx=10, pady=10)
 
-    email2 = customtkinter.CTkEntry(janela_segunda_aba, placeholder_text="Seu e-mail")
-    email2.pack(padx=10, pady=10)
+    cidade = customtkinter.CTkEntry(janela_segunda_aba, placeholder_text="Sua cidade")
+    cidade.pack(padx=10, pady=10)
 
     telefone = customtkinter.CTkEntry(janela_segunda_aba, placeholder_text="Seu telefone")
     telefone.pack(padx=10, pady=10)
 
+    botao_entrar = customtkinter.CTkButton(janela_segunda_aba, text="Entrar", command=clique_segunda_tela)
+    botao_entrar.pack(padx=10, pady=10)
+
     janela_segunda_aba.mainloop()
+
+def clique_segunda_tela():
+    print("Botão 'Entrar' clicado")
 
 # Janela principal
 janela = customtkinter.CTk()
@@ -33,8 +38,8 @@ texto.pack(padx=10, pady=10)
 def clique():
     abrir_segunda_janela()  # Chama a função para abrir a segunda janela em uma nova aba
 
-email = customtkinter.CTkEntry(janela, placeholder_text="Seu e-mail")
-email.pack(padx=10, pady=10)
+cidade = customtkinter.CTkEntry(janela, placeholder_text="Sua cidade")
+cidade.pack(padx=10, pady=10)
 
 senha = customtkinter.CTkEntry(janela, placeholder_text="Sua senha", show='*')
 senha.pack(padx=10, pady=10)
@@ -46,4 +51,3 @@ botao = customtkinter.CTkButton(janela, text="Login", command=clique)
 botao.pack(padx=10, pady=10)
 
 janela.mainloop()
-
